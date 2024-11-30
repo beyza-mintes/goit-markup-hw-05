@@ -424,8 +424,8 @@ ul {
   background-color: rgba(46, 47, 66, 0.4);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  visibility: hidden;
-  opacity: 0;
+  /* visibility: hidden; */
+  /* opacity: 0; */
 }
 .modal-window .is-open {
   opacity: 1;
@@ -470,8 +470,8 @@ ul {
 .svg-close {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.close-button:hover .svg-close,
-.close-button:focus .svg-close {
+.close-button:hover,
+.close-button:focus {
   fill: #ffffff;
 }
 .modal-overlay-p {
@@ -504,7 +504,8 @@ ul {
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-input:hover {
+.form-input:hover,
+.form-input:focus {
   border-color: #4d5ae5;
 }
 .svg-modal {
@@ -514,7 +515,7 @@ ul {
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-input:focus .svg-modal {
+.form-input:focus + .svg-modal {
   fill: #4d5ae5;
 }
 .textarea {
@@ -538,11 +539,29 @@ ul {
 .privacy {
   margin-bottom: 24px;
 }
+.privacy-input:checked + .privacy-span .privacy-label {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
+}
 .privacy-label {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
+}
+.privacy-span {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
 }
 .privacy-label-a {
   color: #4d5ae5;
@@ -552,6 +571,7 @@ ul {
   margin-left: 95px;
   min-width: 169px;
   height: 56px;
+  line-height: 1.5;
   font-weight: 500;
   letter-spacing: 0.04em;
   color: #ffffff;
