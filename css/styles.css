@@ -561,6 +561,7 @@ ul {
   align-items: center;
   justify-content: center;
   fill: transparent;
+  margin-right: 6px;
 }
 .privacy-label-a {
   color: #4d5ae5;
